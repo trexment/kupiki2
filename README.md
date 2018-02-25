@@ -2,7 +2,7 @@ What is Kupiki Hotspot
 ==================
 
 This project is the latest version of [the tutorial](http://www.pihomeserver.fr/2015/08/05/raspberry-pi-coovachilli-et-freeradius-pour-un-hotspot-wifi-avec-portail-captif/) created first on my blog [Pi Home Server](http://www.pihomeserver.fr)
-Created on a Raspberry Pi 2, some functionalities and tools where not available for the Raspberry Pi 3. Also the tutorial was a little bit difficult to 
+Created on a Raspberry Pi 2, some functionalities and tools where not available for the Raspberry Pi 3. Also the tutorial was a little bit difficult to
 implement because of too many steps. That's why i decided to create a script that will help you to build your own hotspot automatically.
 
 Once the script is executed, you will get :
@@ -20,7 +20,7 @@ The installed system have been secured using [ANSSI security recommendation](htt
 Requirements
 ============
 
-What are the requirements ? 
+What are the requirements ?
 - A Raspberry Pi 3
 - An ethernet cable
 - A power supply for the Raspberry Pi
@@ -33,7 +33,7 @@ Usage
 You just have to download the script, edit it to update it's parameters, execute and wait ... If the wifi on the Raspberry is not already configured, don't worry, the script will do it
 
 - Download the script with the following command   
-` git clone https://github.com/pihomeserver/Kupiki-Hotspot-Script.git`
+` git clone https://github.com/trexment/kupiki2.git`
 - Edit the script and update the first lines to define your own configuration (take care that an ethernet link is required)
 - Execute the script using the following command :
 ` sudo chmod +x pihotspot.sh && sudo ./pihotspot.sh `
@@ -58,7 +58,7 @@ For hotspot users creation, manage them with daloradius
 
 Then
 =====
-Once installed use your favorite browser to connect to daloRadius installed on your Raspberry Pi. 
+Once installed use your favorite browser to connect to daloRadius installed on your Raspberry Pi.
 ` http://<mypi_ip>/daloradius ` or ` http://<my_hotspot_name>.local/daloradius ` if your system supports Bonjour.
 The exact address will be displayed at the end of the script execution.
 
@@ -77,6 +77,6 @@ Screenshots
 Support
 =======
 
-Please input your requests or issues in the [GIT repository](https://github.com/pihomeserver/Kupiki-Hotspot-Script/issues) 
+Please input your requests or issues in the [GIT repository](https://github.com/pihomeserver/Kupiki-Hotspot-Script/issues)
 
 Contributions are welcome !
