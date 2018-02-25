@@ -19,9 +19,9 @@ HOTSPOT_HTTPS="N"
 # Network where the hotspot is located
 HOTSPOT_NETWORK="192.168.10.0"
 # Secret word for CoovaChilli
-COOVACHILLI_SECRETKEY="change-me"
+COOVACHILLI_SECRETKEY="zapatilla"
 # Secret word for FreeRadius
-FREERADIUS_SECRETKEY="testing123"
+FREERADIUS_SECRETKEY="marca.com"
 # WAN interface (the one with Internet - default 'eth0' or long name for Debian 9+)
 WAN_INTERFACE=`ip link show | grep '^[1-9]' | awk -F ':' '{print $2}' | awk '{$1=$1};1' | grep '^e'`
 # LAN interface (the one for the hotspot)
@@ -433,7 +433,12 @@ cat >> /etc/network/interfaces << EOT
 
 auto $WAN_INTERFACE
 allow-hotplug $WAN_INTERFACE
-iface $WAN_INTERFACE inet dhcp
+iface $WAN_INTERFACE inet manual
+  address 192.168.1.102
+  netmask 255.255.255.0
+  network 192.168.1.1
+  broadcast 192.168.1.255
+  nameservers 8.8.8.8
 EOT
     check_returned_code $?
 fi
